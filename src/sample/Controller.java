@@ -13,7 +13,7 @@ public class Controller {
     String numUser = "";
     int oper;
     int oper2;
-    int znachSum;
+    String znachOper="";
     int result;
     @FXML
     Button num1;
@@ -37,12 +37,21 @@ public class Controller {
         labeltitle.setText("0");
         oper = Integer.parseInt(num);
         num = "";
+        znachOper = "+";
+
     }
 
     public void resultSum(ActionEvent actionEvent) {
         oper2 = Integer.parseInt(num);
         num = "";
-        result = oper + oper2;
+        result = operathion(oper,oper2);
         labeltitle.setText(String.valueOf(result));
+    }
+    public int operathion (int a, int b) {
+        int c = 0;
+        if(znachOper.equals("+")) {
+          c =  a + b;
+        }
+        return c;
     }
 }
