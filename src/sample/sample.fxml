@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="700" maxWidth="600" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="700" maxWidth="600" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
 
     <Label fx:id="labeltitle" layoutX="25.0" layoutY="55.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="77.0" prefWidth="550.0" text="0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
@@ -22,68 +22,79 @@
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="74.0" layoutY="256.0" mnemonicParsing="false" text="4">
+    <Button fx:id="num4" layoutX="74.0" layoutY="256.0" mnemonicParsing="false" onAction="#NumAction" text="4">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="208.0" layoutY="178.0" mnemonicParsing="false" text="3">
+    <Button fx:id="num3" layoutX="208.0" layoutY="178.0" mnemonicParsing="false" onAction="#NumAction" text="3">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="208.0" layoutY="256.0" mnemonicParsing="false" text="6">
+    <Button fx:id="num6" layoutX="208.0" layoutY="256.0" mnemonicParsing="false" onAction="#NumAction" text="6">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="140.0" layoutY="256.0" mnemonicParsing="false" text="5">
+    <Button fx:id="num5" layoutX="140.0" layoutY="256.0" mnemonicParsing="false" onAction="#NumAction" text="5">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="74.0" layoutY="335.0" mnemonicParsing="false" text="7">
+    <Button fx:id="num7" layoutX="74.0" layoutY="335.0" mnemonicParsing="false" onAction="#NumAction" text="7">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="208.0" layoutY="335.0" mnemonicParsing="false" text="9">
+    <Button fx:id="num9" layoutX="208.0" layoutY="335.0" mnemonicParsing="false" onAction="#NumAction" text="9">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="140.0" layoutY="335.0" mnemonicParsing="false" text="8">
+    <Button fx:id="num8" layoutX="140.0" layoutY="335.0" mnemonicParsing="false" onAction="#NumAction" text="8">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="140.0" layoutY="412.0" mnemonicParsing="false" text="0">
+    <Button fx:id="num0" layoutX="140.0" layoutY="412.0" mnemonicParsing="false" onAction="#NumAction" text="0">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button fx:id="summMath" layoutX="375.0" layoutY="178.0" mnemonicParsing="false" onAction="#operAction" text="+">
+    <Button fx:id="summMath" layoutX="293.0" layoutY="178.0" mnemonicParsing="false" onAction="#operAction" text="+">
         <font>
             <Font size="29.0" />
         </font>
     </Button>
-    <Button layoutX="451.0" layoutY="178.0" mnemonicParsing="false" text="-">
+    <Button fx:id="minusMath" layoutX="364.0" layoutY="178.0" mnemonicParsing="false" onAction="#operAction" prefHeight="63.0" prefWidth="60.0" text="-">
+      <font>
+         <Font size="29.0" />
+      </font></Button>
+    <Button fx:id="umnMath" layoutX="293.0" layoutY="256.0" mnemonicParsing="false" onAction="#operAction" prefHeight="63.0" prefWidth="60.0" text="*">
 
     </Button>
-    <Button layoutX="375.0" layoutY="256.0" mnemonicParsing="false" text="*">
+    <Button fx:id="delitMath" layoutX="364.0" layoutY="256.0" mnemonicParsing="false" onAction="#operAction" prefHeight="63.0" prefWidth="60.0" text="/">
 
     </Button>
-    <Button layoutX="451.0" layoutY="256.0" mnemonicParsing="false" text="/">
-
-    </Button>
-    <Button layoutX="375.0" layoutY="335.0" mnemonicParsing="false" onAction="#clear" prefHeight="63.0" prefWidth="131.0" text="Очистить">
+    <Button layoutX="293.0" layoutY="335.0" mnemonicParsing="false" onAction="#clear" prefHeight="63.0" prefWidth="60.0" text="AC">
         <font>
             <Font size="17.0" />
         </font>
     </Button>
-   <Button layoutX="375.0" fx:id="resultSum" layoutY="412.0" mnemonicParsing="false" onAction="#resultSum" prefHeight="63.0" prefWidth="131.0" text="Равно">
+   <Button fx:id="resultSum" layoutX="364.0" layoutY="335.0" mnemonicParsing="false" onAction="#resultSum" prefHeight="63.0" prefWidth="60.0" text="=">
       <font>
          <Font size="17.0" />
+      </font>
+   </Button>
+   <Button fx:id="plusMinus" layoutX="208.0" layoutY="412.0" mnemonicParsing="false" onAction="#NumAction" prefHeight="63.0" prefWidth="56.0" text="+/-">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <Button fx:id="cavith" layoutX="74.0" layoutY="412.0" mnemonicParsing="false" onAction="#NumAction" text=",">
+      <font>
+         <Font size="29.0" />
       </font>
    </Button>
 
